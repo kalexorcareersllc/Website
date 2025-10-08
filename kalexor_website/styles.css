@@ -1,0 +1,76 @@
+/* styles.css — warm & human theme for Kalexor Careers LLC */ 
+:root{
+  --warm-coral: #FF8C78;
+  --soft-beige: #FFF5EE;
+  --soft-blue: #5DADEC;
+  --text: #2b2b2b;
+  --muted: #666;
+  --max-width: 1100px;
+  --radius: 10px;
+  --container-padding: 20px;
+  --shadow: 0 6px 18px rgba(43,43,43,0.08);
+  font-family: 'Open Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+*{box-sizing:border-box}
+body{margin:0;color:var(--text);background:linear-gradient(180deg,#fff 0%,#fffaf8 100%);-webkit-font-smoothing:antialiased}
+.container{max-width:var(--max-width);margin:0 auto;padding:var(--container-padding)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.site-header{background:transparent;position:sticky;top:0;backdrop-filter:blur(6px);z-index:40}
+.logo{font-weight:700;color:var(--text);text-decoration:none;font-size:1.25rem}
+.logo-sub{color:var(--warm-coral);margin-left:6px;font-weight:600}
+
+.nav{display:flex;gap:14px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;padding:8px 10px;border-radius:8px}
+.nav a:hover{background:rgba(93,173,236,0.08)}
+.btn{background:var(--warm-coral);color:white;padding:10px 14px;border-radius:8px;text-decoration:none;display:inline-block}
+.btn-outline{border:2px solid var(--warm-coral);background:transparent;color:var(--warm-coral);padding:8px 12px}
+.btn-ghost{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:8px 10px;border-radius:8px}
+
+.menu-toggle{display:none;background:transparent;border:0;font-size:1.25rem}
+
+.hero{padding:48px 0;border-radius:14px}
+.hero.warm{background:linear-gradient(135deg,var(--soft-beige),#fff);margin-top:8px;padding-bottom:56px}
+.hero-inner{display:flex;gap:28px;align-items:center}
+.hero-text{flex:1}
+.lead{color:var(--muted);font-size:1.05rem;margin-top:6px}
+.hero-visual{width:220px;height:160px;display:flex;align-items:center;justify-content:center}
+.people-blob{font-size:48px;width:160px;height:160px;border-radius:18px;background:linear-gradient(180deg,var(--warm-coral),var(--soft-blue));display:flex;align-items:center;justify-content:center;color:white;box-shadow:var(--shadow)}
+
+.features{display:flex;gap:18px;padding:36px 0}
+.feature{flex:1;background:white;padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+
+.how{padding:30px 0}
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.how-grid h2{margin-top:0}
+.link{color:var(--soft-blue);text-decoration:none}
+
+.cta{padding:32px 0;border-radius:12px;margin:28px 0;text-align:center}
+.soft-coral{background:linear-gradient(90deg,#fff1ef,var(--soft-beige))}
+.soft-beige{background:var(--soft-beige);padding:22px;border-radius:10px}
+
+.page-hero{padding:22px 0}
+.info{padding:8px 0}
+.bullets{list-style:disc;margin-left:20px;color:var(--muted)}
+
+.cards .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:12px}
+.card{background:white;padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+
+.contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;padding:18px}
+.contact-card{padding:18px}
+
+.faq details{background:white;padding:12px;border-radius:10px;margin-bottom:8px;box-shadow:var(--shadow)}
+
+.site-footer{padding:18px 0;margin-top:28px;background:transparent}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:0.95rem}
+
+/* Responsive */
+@media (max-width:900px){
+  .how-grid{grid-template-columns:1fr}
+  .features{flex-direction:column}
+  .hero-inner{flex-direction:column}
+  .how-grid,.card-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .menu-toggle{display:inline-block}
+  .nav{display:none;position:absolute;right:18px;top:64px;background:white;padding:12px;border-radius:10px;box-shadow:var(--shadow);flex-direction:column}
+  .nav.open{display:flex}
+}
